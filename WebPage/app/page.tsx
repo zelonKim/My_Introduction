@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <>
@@ -26,6 +28,22 @@ export default function Home() {
         훌쩍 지나갔다고 한다. 그리고 그는 항상 바뀌는 기술 트렌드에 맞춰서
         꾸준한 프로그래밍 공부에 대한 필요성을 느꼈다고 한다.
         <br />
+        <div className="mt-5"></div>
+        <Link href="/hobby" className="font-bold">
+          Hobby
+        </Link>
+        <div className="mt-5"></div>
+        <Link href="/vision" className="font-bold">
+          Vision
+        </Link>
+        <div className="mt-5"></div>
+        <Link href="/swot" className="font-bold">
+          SWOT
+        </Link>
+        <div className="mt-5"></div>
+        <Link href="/study" className="font-bold">
+          Study
+        </Link>
       </p>
     </>
   );
