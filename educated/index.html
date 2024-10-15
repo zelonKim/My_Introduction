@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>History</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/c47106c6a7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      
+      <a class="home" href="../viewMore/index.html">
+        <span>⬅ home</span>
+      </a>
+
+
+      <ul class="auto">
+        <li class="btnStart"><i class="fas fa-play"></i></li>
+        <li class="btnStop"><i class="fas fa-pause"></i></li>
+      </ul>
+
+      <div class="swiper-wrapper">
+
+        <a class="swiper-slide" href="https://nerds.tistory.com/category/AI%20%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5">
+          <div class="inner">
+            <div class="con">
+              <img src="img/pic1.png" />
+              <h2>인공지능 혁신학교 AIFFEL</h2>
+              <p>2022.11 ~ 2023. 04 in 모두의 연구소</p>
+            </div>
+          </div>
+        </a>
+
+        <a
+          class="swiper-slide"
+          href="https://ksz18601.blogspot.com/search?q=Nico"
+        >
+          <div class="inner">
+            <div class="con">
+              <img src="img/pic2.png" />
+              <h2>노마드코더 FullStack 웹개발</h2>
+              <p>2023. 05 ~ 2024. 06 in 노마드 컴퍼니</p>
+            </div>
+          </div>
+        </a>
+
+        <a
+          class="swiper-slide"
+          href="https://ksz18601.blogspot.com/search?q=Nam"
+        >
+          <div class="inner">
+            <div class="con">
+              <img src="img/pic3.png" />
+              <h2>남궁성 Java & Spring & Spring Boot의 정석</h2>
+              <p>2023. 11 ~ 2024. 01 in 패스트 캠퍼스</p>
+            </div>
+          </div>
+        </a>
+
+        <a
+          class="swiper-slide"
+          href="https://ksz18601.blogspot.com/search/label/ReactNative"
+        >
+          <div class="inner">
+            <div class="con">
+              <img src="img/pic4.png" />
+              <h2>React Native를 활용한 앱 개발</h2>
+              <p>2024. 07 ~ 2024. 08 in 패스트 캠퍼스</p>
+            </div>
+          </div>
+        </a>
+
+        <a class="swiper-slide" href="">
+          <div class="inner">
+            <div class="con">
+              <img src="img/pic5.png" />
+              <h2>Kakao 개발자 컨퍼런스</h2>
+              <p>2024. 10. 22 - 24 in 카카오 AI 캠퍼스</p>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- 좌우버튼 -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- 페이징 버튼 -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <script>
+      const swiper = new Swiper(".wrap", {
+        direction: "horizontal",
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        spaceBetween: 0,
+        slidesPerView: "auto",
+        grabCursor: true,
+        centeredSlides: true,
+        speed: 1000,
+        effect: "coverflow",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: -100,
+          depth: 400,
+          modifier: 1,
+          slideShadows: false,
+        },
+        autoplay: {
+          delay: 1000,
+          disableOnInteraction: true,
+        },
+      });
+
+      // .btnStart 요소를 찾아서 btnStart에 저장
+      const btnStart = document.querySelector(".btnStart");
+      // .btnStop 요소를 찾아서 btnStop에 저장
+      const btnStop = document.querySelector(".btnStop");
+
+      //btnStart버튼을 클릭시 자동롤링 시작
+      btnStart.addEventListener("click", () => {
+        swiper.autoplay.start();
+      });
+
+      //btnStart버튼을 클릭시 자동롤링 정지
+      btnStop.addEventListener("click", () => {
+        swiper.autoplay.stop();
+      });
+    </script>
+  </body>
+</html>
